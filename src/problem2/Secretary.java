@@ -21,7 +21,7 @@ public void setOvertimeHours(double overtimeHours) {
 @Override
 public double computeSalary() {
 	
-	return (salary + (12*overtimeHours));
+	return (super.computeSalary() + (12*overtimeHours));
 }
 
 @Override

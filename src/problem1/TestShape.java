@@ -26,3 +26,6 @@ public static void printTotal(Shape[] shapes){
 	System.out.println("Total Perimeter is: " + (double) Math.round(totalPerimeter*100)/100);
 }
 }
+/*Output
+Total Area is: 58611.61
+Total Perimeter is: 1393.69*/

@@ -22,8 +22,7 @@ public static void main(String[] args) {
 	System.out.println("Do you wish to see the sum of all salaries in the department ? Y/N");
 	String answer= scanner.next();
 	if(answer.equalsIgnoreCase("Y")){
-//		System.out.println("Sum of all Professor Salary: " + getTotalProfessorSalary(department));
-//		System.out.println("Sum of all Secretary Salary: " + getTotalProfessorSalary(department));
+
 		System.out.println("All the Salaries in the Department is : " + getTotalDepartmentSalary(department));
 	}
 	else {
@@ -31,25 +30,24 @@ public static void main(String[] args) {
 		System.exit(0);
 	}
 	}
-//	public static double getTotalProfessorSalary(DeptEmployee[] department){
-//		double ProfessorTotal=0.0;
-//		for (DeptEmployee ProfList : department) {
-//			ProfessorTotal +=ProfList.Pro;
-//		}
-//		return ProfessorTotal;
-//}
-//	public static double getTotalSecretarySalary(DeptEmployee[] department){
-//		double SecretaryTotal=0.0;
-//		for (DeptEmployee SecList : department) {
-//			SecretaryTotal +=SecList.salary;
-//		}
-//		return SecretaryTotal;
-//}
+
 	public static double getTotalDepartmentSalary(DeptEmployee[] department){
 		double DepartmentTotal=0.0;
 		for (DeptEmployee DepList : department) {
-			DepartmentTotal +=DepList.salary;
+			DepartmentTotal +=DepList.computeSalary();
 		}
 		return DepartmentTotal;
 }
 }
+/*Output
+Professor [Name=Thomas Tibebu, Salary=105000.0, HireDate=2010-06-20, NumberOfPublication=20]
+Professor [Name=Jone Smith, Salary=85000.0, HireDate=2015-10-22, NumberOfPublication=10]
+Professor [Name=Anne Jakson, Salary=60000.0, HireDate=2016-10-30, NumberOfPublication=5]
+Secretary [Name=Ami Mekaile, Salary=65000.0, HireDate=2015-05-10, OvertimeHours=80.0]
+Secretary [Name=Danile Frank, Salary=70000.0, HireDate=2005-02-19, OvertimeHours=60.0]
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Do you wish to see the sum of all salaries in the department ? Y/N
+y
+All the Salaries in the Department is : 386680.0
+*/

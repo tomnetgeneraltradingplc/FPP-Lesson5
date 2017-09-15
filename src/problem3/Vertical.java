@@ -1,10 +1,11 @@
 package problem3;
 
-public class Vertical extends Figure{
-
+public class Vertical extends Figure {
 	@Override
-	public String getFigure() {
-		return "||";
+
+	void getFigure() {
+		System.out.print("||");
+
 	}
-	
+
 }
